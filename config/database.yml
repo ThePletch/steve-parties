@@ -1,6 +1,10 @@
 default: &default
-  adapter: postgresql
+  adapter: mysql2
+  port: 3306
   encoding: unicode
+  host: steve-parties-db.cluster-cvyte5y3yhmm.us-east-1.rds.amazonaws.com
+  username: steve
+  password: <%= ENV['DB_PASSWORD'] %>
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
@@ -65,4 +69,3 @@ test:
 production:
   <<: *default
   database: steve_parties_production
-  password: <%= ENV['STEVE_PARTIES_DATABASE_PASSWORD'] %>

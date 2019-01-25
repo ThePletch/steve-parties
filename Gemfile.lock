@@ -151,11 +151,11 @@ GEM
     mini_portile2 (2.3.0)
     minitest (5.11.3)
     multi_json (1.13.1)
+    mysql2 (0.5.2)
     nio4r (2.3.0)
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
     orm_adapter (0.5.0)
-    pg (0.20.0)
     poltergeist (1.18.1)
       capybara (>= 2.1, < 4)
       cliver (~> 0.3.1)
@@ -198,7 +198,6 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
-    redcarpet (3.4.0)
     request_store (1.4.1)
       rack (>= 1.4)
     responders (2.4.0)
@@ -287,12 +286,11 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
-  pg
+  mysql2
   poltergeist
   puma (~> 3.0)
   rails (~> 5.2.0)
   rails-controller-testing
-  redcarpet (~> 3.4.0)
   rspec-rails
   sass-rails (~> 5.0)
   spring
@@ -305,4 +303,4 @@ RUBY VERSION
    ruby 2.5.0p0
 
 BUNDLED WITH
-   1.16.1
+   1.16.6
