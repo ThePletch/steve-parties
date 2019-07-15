@@ -1,7 +1,7 @@
 class Event < ApplicationRecord
   include Ownable
 
-  LANDING_PAGE_PHOTO_HEIGHT = 400
+  LANDING_PAGE_PHOTO_HEIGHT = 500
 
   TIMESTAMP_FORMAT = '%m/%d/%Y %l:%M %P'
 
@@ -26,7 +26,7 @@ class Event < ApplicationRecord
   validates_associated :address
 
   def landing_page_photo
-    photo.variant(resize: '1700', combine_options: {gravity: 'North', crop: '1700x500+0+0'})
+    photo.variant(resize: '1700', combine_options: {gravity: 'North', crop: "1700x#{LANDING_PAGE_PHOTO_HEIGHT}+0+0"})
   end
 
   def parse_time(timestamp)
